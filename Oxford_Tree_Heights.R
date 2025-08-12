@@ -1,6 +1,6 @@
 ### Oxford Tree Heights
 ### 2025.08.12
-### Oliver G. Spacey
+### Oliver G. Spacey, Stephanie Pearce
 
 # Script to calculate estimate of tree heights for each tree and output a .csv for each subset
 
