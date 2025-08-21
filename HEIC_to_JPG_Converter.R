@@ -1,14 +1,20 @@
-# -1- Set working directory to image location -----------------------------------------
-setwd("C:/SalGo Research/Datasets/Incomplete Images/TRI - Trinity/TRI1/2024-25")
+## HEIC TO JPG CONVERTER ##
+# This code allows the user to convert a file containing .HEIC images to .JPG images,
+# and outputs a folder containing .JPG images next to the .HEIC images.
 
 library(magick)
+library(rstudioapi)   # provides function to let user pick directory
+
+# -1- Ask user to pick the folder  ----------------------------------------------------
+wd <- selectDirectory(caption = "Select the folder containing your chosen images:")
+setwd(wd)
 
 # -2- Get all HEIC files --------------------------------------------------------------
 heic_files <- list.files(pattern = "\\.HEIC$", ignore.case = TRUE)
 
 
 # -3- Define and create output folder -------------------------------------------------
-output_folder <- "TRI202425_JPG"
+output_folder <- "JPG_images"
 if (!dir.exists(output_folder)) dir.create(output_folder)
 
 
